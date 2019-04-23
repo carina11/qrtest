@@ -3,15 +3,16 @@
     <head>
         <meta charset="UTF-8">
         <title>QRコード認識テスト</title>
+        <!--script type="text/javascript" src="local_save.js"></script-->
         <script type="text/javascript" src="test.js"></script>
-        <script src="https://rawgit.com/sitepoint-editors/jsqrcode/master/src/qr_packed.js"> </script>
+        <script src="qr_packed.js"> </script>
     </head>
     <body>
 
         <h2>QRコード認識</h2>
         
         <form name="mainForm">
-            <input name="qrtext"type=text class=qrcode-text>
+            <input name="qrtext" value="" type=text class=qrcode-text>
             <label class=qrcode-text-btn>
                     <input type=file
                     accept="image/*"
@@ -19,7 +20,11 @@
                     onchange="openQRCamera(this);"
                     tabindex=-1>
                     <br>
-                    <input type="button" value="send" onclick="send();">
+                    <!--a id="download" href="#" download="test.txt" onclick="handleDownload()">ダウンロード</a-->
+
+                    <input type="button" value="finish" onclick="finish();">
+                    <input type="button"  value="send" onclick="send();">
+
             </label>
         </form>
         
